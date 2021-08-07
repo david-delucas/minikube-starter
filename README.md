@@ -6,13 +6,32 @@ Some basic minikube starter project
 
 ```console
 david@bolarque:~$ curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-
 david@bolarque:~$ sudo install minikube-linux-amd64 /usr/local/bin/minikube
+```
+To actually start minikube you'll need a driver, I will use here the Linux Kernel-based VM Driver.
+
+Then set the kvm2 as the default driver for minikube and start it:
+
+```console
+david@bolarque:~$ minikube config set driver kvm2
+david@bolarque:~$ minikube start
+```
+You'll have now the kube configuration folder in `~/.kube/config` and you can check if `kubectl` can access your cluster : 
+
+```
+kubectl cluster-info
+kubectl get po -A
 
 ```
 
+Besides Minikube has a dashboard you can access with `minikube dashboard` command.
+
+Enabling bash completion is a must for `kubectl`, how to do this is explained  if you run `kubectl completion -h`.
 
 
 ## references
 
 [minikube docs](https://minikube.sigs.k8s.io/docs/start/) 
+
+[KVM installation Ubuntu](https://help.ubuntu.com/community/KVM/Installation)
+
