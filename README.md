@@ -4,11 +4,10 @@ Some basic minikube starter project
 ## installation
 
 
-```bash
+```console
+david@bolarque:~$ curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 
-curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-sudo install minikube-linux-amd64 /usr/local/bin/minikube
-
+david@bolarque:~$ sudo install minikube-linux-amd64 /usr/local/bin/minikube
 
 ```
 
