@@ -28,6 +28,22 @@ Besides Minikube has a dashboard you can access with `minikube dashboard` comman
 
 Enabling bash completion is a must for `kubectl`, how to do this is explained  if you run `kubectl completion -h`.
 
+## create resources
+
+```console
+david@bolarque:~/projects/minikube-starter$ k run nginx --image=nginx --port=80 --expose --dry-run=client -o yaml > resources/1-deployment.yaml
+david@bolarque:~/projects/minikube-starter$ k create -f resources/
+service/nginx created
+pod/nginx created
+```
+
+## kubctl explain command
+
+Use it as a commnand line alternative to i*net search engines while finding out fileds syntax:
+```console
+david@bolarque:~/projects/minikube-starter$ k explain pod.spec.containers --recursive
+```
+
 
 ## references
 
