@@ -44,6 +44,14 @@ Use it as a commnand line alternative to i*net search engines while finding out 
 david@bolarque:~/projects/minikube-starter$ k explain pod.spec.containers --recursive
 ```
 
+## delete resources
+
+
+```console
+david@bolarque:~/projects/minikube-starter$ k delete -f resources/
+service "nginx" deleted
+pod "nginx" deleted
+```
 
 ## references
 
